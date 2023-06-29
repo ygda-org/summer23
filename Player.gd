@@ -8,11 +8,11 @@ func get_input():
 	velocity = Vector2.ZERO
 	if Input.is_action_pressed("a"):
 		velocity.x -= 1
-	elif Input.is_action_pressed("d"):
+	if Input.is_action_pressed("d"):
 		velocity.x += 1
-	elif Input.is_action_pressed("w"):
+	if Input.is_action_pressed("w"):
 		velocity.y -= 1
-	elif Input.is_action_pressed("s"):
+	if Input.is_action_pressed("s"):
 		velocity.y += 1
 	velocity = velocity.normalized() * speed
 
