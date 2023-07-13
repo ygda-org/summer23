@@ -8,14 +8,20 @@ func get_input():
 	velocity = Vector2.ZERO
 	if Input.is_action_pressed("a"):
 		velocity.x -= 1
-	if Input.is_action_pressed("d"):
+		$AnimatedSprite.play("walkLeft")
+	elif Input.is_action_pressed("d"):
 		velocity.x += 1
-	if Input.is_action_pressed("w"):
+		$AnimatedSprite.play("walkRight")
+	elif Input.is_action_pressed("w"):
 		velocity.y -= 1
-	if Input.is_action_pressed("s"):
+		$AnimatedSprite.play("walkUp")
+	elif Input.is_action_pressed("s"):
 		velocity.y += 1
+		$AnimatedSprite.play("walkDown")
+	else:
+		$AnimatedSprite.play("idle")
 	velocity = velocity.normalized() * speed
-
+	
 func _physics_process(delta):
 	get_input()
 	velocity = move_and_slide(velocity)
