@@ -33,6 +33,10 @@ func get_input():
 		if(direction == 3):
 			$AnimatedSprite.play("idleLeft")
 	velocity = velocity.normalized() * speed
+
+
+	
+				
 	
 func _physics_process(delta):
 	get_input()
