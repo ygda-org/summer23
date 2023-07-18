@@ -1,6 +1,7 @@
 extends Panel
 
 var currentFruit = "Banana"
+var fruitList = ["Apple", "Banana"]
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -14,6 +15,8 @@ func getCurFruit():
 	return currentFruit 
 	
 func newFruit():
+	var index = int(randf() * len(fruitList)) 
+	currentFruit = fruitList[index]
 	$Label.set_text("Obtain: " + currentFruit)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

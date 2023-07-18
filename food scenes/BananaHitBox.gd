@@ -22,3 +22,4 @@ func _on_BananaHitBox_body_entered(body):
 		if(fruit == get_parent().name):
 			var ScoreText = body.find_node("ScoreText")
 			ScoreText.increaseScore()
+			body.find_node("Objective").newFruit()

@@ -1,13 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Banana.tscn" type="PackedScene" id=2]
+[ext_resource path="res://food scenes/Banana.tscn" type="PackedScene" id=2]
 [ext_resource path="res://groundTileset.tres" type="TileSet" id=3]
+[ext_resource path="res://food scenes/Apple.tscn" type="PackedScene" id=4]
 
 [node name="Tutorial" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 104, 76 )
+position = Vector2( 119, 100 )
 
 [node name="TileMap" type="TileMap" parent="."]
 z_index = -1
@@ -18,3 +19,6 @@ tile_data = PoolIntArray( 196607, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0
 
 [node name="Banana" parent="." instance=ExtResource( 2 )]
 position = Vector2( 17, 50 )
+
+[node name="Apple" parent="." instance=ExtResource( 4 )]
+position = Vector2( 194, 159 )
