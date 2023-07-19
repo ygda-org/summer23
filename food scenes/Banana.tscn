@@ -9,7 +9,7 @@ extents = Vector2( 33, 32 )
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 16 )
 
-[node name="Banana" type="Node2D"]
+[node name="Banana" type="Node2D" groups=["fruit"]]
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -1 )

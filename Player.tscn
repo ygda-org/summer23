@@ -172,3 +172,7 @@ smoothing_enabled = true
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
 
 [node name="Interface" parent="Camera2D/CanvasLayer" instance=ExtResource( 3 )]
+margin_left = 1.0
+margin_top = -1.0
+margin_right = 1.0
+margin_bottom = -1.0
