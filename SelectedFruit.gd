@@ -1,7 +1,7 @@
 extends Panel
 
-var currentFruit = "Banana"
-var fruitList = ["Apple", "Banana"]
+var currentFruit
+var fruitList = ["Apple", "Banana", "Orange"]
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
