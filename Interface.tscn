@@ -25,12 +25,12 @@ valign = 1
 script = ExtResource( 2 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_right = 151.0
-margin_bottom = 27.0
+margin_right = 178.0
+margin_bottom = 43.0
 
 [node name="Objective" type="Panel" parent="HBoxContainer"]
 margin_right = 134.0
-margin_bottom = 40.0
+margin_bottom = 43.0
 rect_min_size = Vector2( 134, 40 )
 script = ExtResource( 1 )
 
@@ -46,7 +46,7 @@ valign = 1
 [node name="ObjectiveButton" type="Button" parent="HBoxContainer"]
 margin_left = 138.0
 margin_right = 178.0
-margin_bottom = 40.0
+margin_bottom = 43.0
 rect_min_size = Vector2( 40, 40 )
 script = ExtResource( 3 )
 
