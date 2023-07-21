@@ -5,7 +5,7 @@
 [ext_resource path="res://Interface.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 11.5, 20.5 )
+extents = Vector2( 16.5, 30 )
 
 [sub_resource type="AtlasTexture" id=19]
 flags = 4
@@ -155,12 +155,12 @@ position = Vector2( 48, 14 )
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -47.5, -15.5 )
+position = Vector2( -55.5, -17 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( -42, -18 )
-scale = Vector2( 0.146767, 0.153516 )
+position = Vector2( -47, -16 )
+scale = Vector2( 0.216789, 0.226758 )
 frames = SubResource( 18 )
 animation = "idleUp"
 
