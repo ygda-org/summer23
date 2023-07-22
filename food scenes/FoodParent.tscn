@@ -3,10 +3,10 @@
 [ext_resource path="res://food scenes/BananaHitBox.gd" type="Script" id=1]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 38, 36 )
+extents = Vector2( 37, 37 )
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 32, 22.5 )
+extents = Vector2( 32, 20 )
 
 [node name="Food" type="Node2D"]
 
@@ -21,7 +21,7 @@ shape = SubResource( 2 )
 position = Vector2( 0, -1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 0, -8.5 )
+position = Vector2( 0, -10.75 )
 shape = SubResource( 1 )
 
 [node name="Control" type="Control" parent="."]
