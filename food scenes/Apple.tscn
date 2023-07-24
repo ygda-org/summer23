@@ -8,5 +8,8 @@
 [node name="Sprite" type="Sprite" parent="." index="0"]
 texture = ExtResource( 2 )
 
+[node name="CollisionShape2D" parent="BananaHitBox" index="0"]
+position = Vector2( 0, -1 )
+
 [node name="CollisionShape2D" parent="StaticBody2D" index="0"]
 position = Vector2( 0, -11 )

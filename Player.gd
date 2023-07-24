@@ -4,7 +4,9 @@ extends KinematicBody2D
 export var speed = 200
 var velocity = Vector2.ZERO
 var direction = 0
-
+var inventory = {
+	
+}
 func get_input():
 	velocity = Vector2.ZERO
 	if Input.is_action_pressed("a"):
@@ -34,7 +36,18 @@ func get_input():
 			$AnimatedSprite.play("idleLeft")
 	velocity = velocity.normalized() * speed
 
-
+func addFruit(name):
+	var inventoryInterface = $Camera2D/CanvasLayer/Interface/HBoxContainer2/Inventory
+	if !(name in inventory.keys()):
+		inventory[name] = 1
+		inventoryInterface.get_parent().set_anchor(MARGIN_BOTTOM, inventoryInterface.get_parent().anchor_bottom - 5)
+	else: 
+		inventory[name] = inventory[name] + 1
+	var text = ""
+	for fruit in inventory:
+		text = text + fruit + " x" + str(inventory[fruit]) + "\n"
+	inventoryInterface.find_node("Label").text = "Inventory" + "\n" + text
+	
 	
 				
 	

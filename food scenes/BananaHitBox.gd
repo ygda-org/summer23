@@ -19,10 +19,8 @@ func _ready():
 #	pass
 func _process(delta):
 	if(inreach == true && Input.is_action_just_pressed("e")):
-			var ScoreText = player.find_node("ScoreText")
-			if(player.find_node("Objective").getCurFruit() == get_parent().name):
-				ScoreText.increaseScore()
-				player.find_node("Objective").newFruit()
+		player.addFruit(get_parent().name)
+
 
 func _on_BananaHitBox_body_entered(body):
 	if("Player" in body.name):# Replace with function body.
