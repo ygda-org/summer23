@@ -40,7 +40,7 @@ func addFruit(name):
 	var inventoryInterface = $Camera2D/CanvasLayer/Interface/HBoxContainer2/Inventory
 	if !(name in inventory.keys()):
 		inventory[name] = 1
-		inventoryInterface.get_parent().set_anchor(MARGIN_BOTTOM, inventoryInterface.get_parent().anchor_bottom - 5)
+		inventoryInterface.get_parent().set_size(inventoryInterface.get_parent().get_size() + Vector2(0, 10))
 	else: 
 		inventory[name] = inventory[name] + 1
 	var text = ""
