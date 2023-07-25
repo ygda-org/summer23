@@ -10,7 +10,16 @@ var inRange = false
 func _ready():
 	$Control.visible = false # Replace with function body.
 
-
+func _process(delta):
+	if(inRange && Input.is_action_just_pressed("e")):
+		var inventory = player.getInventory()
+		var shoppingList = player.find_node("Objective").getShoppingList()
+		var flag = true
+		for fruit in shoppingList:
+			if(!fruit in inventory.keys() || inventory[fruit] < shoppingList[fruit]):
+				flag = false
+		if(flag == true):
+			player.find_node("Test").visible = true
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass

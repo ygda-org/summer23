@@ -18,7 +18,7 @@ func _ready():
 #func _process(delta):
 #	pass
 func _process(delta):
-	if(inreach == true && Input.is_action_just_pressed("e")):
+	if(inreach == true && Input.is_action_just_pressed("e") && !"Empty" in get_parent().name):
 		player.addFruit(get_parent().name)
 
 

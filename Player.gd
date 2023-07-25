@@ -49,7 +49,8 @@ func addFruit(name):
 	inventoryInterface.find_node("Label").text = "Inventory" + "\n" + text
 	
 	
-				
+func getInventory():
+	return inventory
 	
 func _physics_process(delta):
 	get_input()
