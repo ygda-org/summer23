@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Carts/ShoppingCartSpawn.tscn" type="PackedScene" id=1]
+
+[node name="SpawnArea" type="ReferenceRect"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ShoppingCartSpawn" parent="." instance=ExtResource( 1 )]
