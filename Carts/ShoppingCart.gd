@@ -12,17 +12,32 @@ var moving = false
 func _ready():
 	$Timer.start()
 	randomize()
-	direction = int(randf() * 2)
+	direction = int(randf() * 4)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
+	if(moving == false):
+		if(direction == 1):
+			$AnimationPlayer.play("idleRight")
+		if(direction == 3):
+			$AnimationPlayer.play("idleLeft")
+		if(direction == 2):
+			$AnimationPlayer.play("idleDown")
+		if(direction == 0):
+			$AnimationPlayer.play("idleUp")
 	if(moving == true):
 		if(direction == 1):
 			$AnimationPlayer.play("rollRight")
 			velocity = move_and_slide(Vector2(SPEED, 0))
-		if(direction == 0):
+		if(direction == 3):
 			$AnimationPlayer.play("rollLeft")
 			velocity = move_and_slide(Vector2(-SPEED, 0))
+		if(direction == 2):
+			$AnimationPlayer.play("rollDown")
+			velocity = move_and_slide(Vector2(0, SPEED))
+		if(direction == 0):
+			$AnimationPlayer.play("rollUp")
+			velocity = move_and_slide(Vector2(0, -SPEED))
 		if(get_slide_count() > 0):
 			for i in get_slide_count():
 				if("Player" in get_slide_collision(i).collider.name):

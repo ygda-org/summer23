@@ -52,6 +52,7 @@ func addFruit(name):
 
 func dead():
 	dead = true
+	velocity = Vector2()
 	$AnimatedSprite.queue_free()
 	$CollisionShape2D.queue_free()
 	$Timer.start()
