@@ -13,18 +13,18 @@ func _ready():
 	$Timer.start()
 	randomize()
 	direction = int(randf() * 4)
+	if(moving == false):
+		if(direction == 1):
+			$Sprite.frame = 0 #right
+		if(direction == 3):
+			$Sprite.frame = 4 #left
+		if(direction == 2):
+			$Sprite.frame = 12 #Down
+		if(direction == 0):
+			$Sprite.frame = 8  #Up
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	if(moving == false):
-		if(direction == 1):
-			$AnimationPlayer.play("idleRight")
-		if(direction == 3):
-			$AnimationPlayer.play("idleLeft")
-		if(direction == 2):
-			$AnimationPlayer.play("idleDown")
-		if(direction == 0):
-			$AnimationPlayer.play("idleUp")
 	if(moving == true):
 		if(direction == 1):
 			$AnimationPlayer.play("rollRight")

@@ -20,13 +20,13 @@ margin_right = 531.0
 margin_bottom = 377.0
 
 [node name="SpawnArea" parent="." instance=ExtResource( 10 )]
-margin_left = 95.0
-margin_top = 413.0
-margin_right = 255.0
+margin_left = 37.0
+margin_top = 404.0
+margin_right = 332.0
 margin_bottom = 530.0
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 728, 344 )
+position = Vector2( 737, 364 )
 
 [node name="Ground" type="TileMap" parent="."]
 z_index = -1
