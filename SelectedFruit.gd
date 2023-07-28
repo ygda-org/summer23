@@ -2,7 +2,7 @@ extends Panel
 
 #var currentFruit
 var numFruits = int(randf() * 20) + 10
-var fruitList = ["Apple", "Banana", "Orange", "Milk"]
+var fruitList = ["Apple", "Banana", "Orange", "Milk", "Ice Cream"]
 var curDict = {}
 # Declare member variables here. Examples:
 # var a = 2

@@ -7,10 +7,10 @@
 extents = Vector2( 4, 16 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 12, 9.25 )
+extents = Vector2( 12, 4 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 16, 9.625 )
+extents = Vector2( 16, 4 )
 
 [node name="wallTileMap" type="Node2D"]
 
@@ -69,7 +69,7 @@ shape = SubResource( 1 )
 position = Vector2( -329, 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2/StaticBody2D5"]
-position = Vector2( 333, -16.75 )
+position = Vector2( 333, -22 )
 shape = SubResource( 2 )
 
 [node name="Wall5" type="Sprite" parent="."]
@@ -82,7 +82,7 @@ region_rect = Rect2( 32, 0, 32, 32 )
 position = Vector2( -364, 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall5/StaticBody2D6"]
-position = Vector2( 364, -17.375 )
+position = Vector2( 364, -23 )
 shape = SubResource( 3 )
 
 [node name="Wall6" type="Sprite" parent="."]
@@ -102,5 +102,5 @@ shape = SubResource( 1 )
 position = Vector2( -401, 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall6/StaticBody2D7"]
-position = Vector2( 397, -17 )
+position = Vector2( 397, -22 )
 shape = SubResource( 2 )

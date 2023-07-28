@@ -25,8 +25,9 @@ func _process(delta):
 func _on_BananaHitBox_body_entered(body):
 	if("Player" in body.name):# Replace with function body.
 		player = body
-		get_parent().find_node("Panel").visible = true
-		inreach = true
+		if(!"Empty" in get_parent().name):
+			get_parent().find_node("Panel").visible = true
+			inreach = true
 
 func _on_BananaHitBox_body_exited(body):
 	if("Player" in body.name):
