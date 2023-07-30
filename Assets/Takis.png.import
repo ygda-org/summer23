@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Pixilart_Sprite_Sheet_2.png-9bc06d52b285c0b9412355710c0d1656.stex"
+path="res://.import/Takis.png-87784495ea1d7be8d04b8e07ab42ced1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pixilart_Sprite_Sheet_2.png"
-dest_files=[ "res://.import/Pixilart_Sprite_Sheet_2.png-9bc06d52b285c0b9412355710c0d1656.stex" ]
+source_file="res://Assets/Takis.png"
+dest_files=[ "res://.import/Takis.png-87784495ea1d7be8d04b8e07ab42ced1.stex" ]
 
 [params]
 

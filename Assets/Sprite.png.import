@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Pixilart_Sprite_Sheet_2.png-9bc06d52b285c0b9412355710c0d1656.stex"
+path="res://.import/Sprite.png-bf6754e3a6f39a2dfe476db90f1d95e0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pixilart_Sprite_Sheet_2.png"
-dest_files=[ "res://.import/Pixilart_Sprite_Sheet_2.png-9bc06d52b285c0b9412355710c0d1656.stex" ]
+source_file="res://Assets/Sprite.png"
+dest_files=[ "res://.import/Sprite.png-bf6754e3a6f39a2dfe476db90f1d95e0.stex" ]
 
 [params]
 

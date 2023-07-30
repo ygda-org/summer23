@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Pixilart_Sprite_Sheet_2.png-9bc06d52b285c0b9412355710c0d1656.stex"
+path="res://.import/Cheetos.png-4a0f2072ae268d5d3cab0d4a1b57c4f2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pixilart_Sprite_Sheet_2.png"
-dest_files=[ "res://.import/Pixilart_Sprite_Sheet_2.png-9bc06d52b285c0b9412355710c0d1656.stex" ]
+source_file="res://Assets/Cheetos.png"
+dest_files=[ "res://.import/Cheetos.png-4a0f2072ae268d5d3cab0d4a1b57c4f2.stex" ]
 
 [params]
 

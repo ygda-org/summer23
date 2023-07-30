@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Pixilart_Sprite_Sheet_2.png-9bc06d52b285c0b9412355710c0d1656.stex"
+path="res://.import/redmilk.png-8d5fccb4a9ab90d9b7f83a9889ed58d8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pixilart_Sprite_Sheet_2.png"
-dest_files=[ "res://.import/Pixilart_Sprite_Sheet_2.png-9bc06d52b285c0b9412355710c0d1656.stex" ]
+source_file="res://Assets/redmilk.png"
+dest_files=[ "res://.import/redmilk.png-8d5fccb4a9ab90d9b7f83a9889ed58d8.stex" ]
 
 [params]
 
