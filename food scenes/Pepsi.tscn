@@ -3,7 +3,7 @@
 [ext_resource path="res://Assets/Pepsi.png" type="Texture" id=1]
 [ext_resource path="res://food scenes/Coke.tscn" type="PackedScene" id=2]
 
-[node name="Pepsi" instance=ExtResource( 2 )]
+[node name="Peepsi" instance=ExtResource( 2 )]
 
 [node name="Coke" parent="." index="0"]
 texture = ExtResource( 1 )

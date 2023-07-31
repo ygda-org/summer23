@@ -8,7 +8,7 @@ var ShoppingCart = preload("res://Carts/ShoppingCart.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Timer.wait_time = randf() * 4 + 2
+	$Timer.wait_time = randf() * 4 
 	$Timer.start() # Replace with function body.
 
 
@@ -18,7 +18,7 @@ func _ready():
 
 
 func _on_Timer_timeout():
-	$Timer.wait_time = randf() * 4 + 2
+	$Timer.wait_time = randf() * 4 
 	var shoppingCart = ShoppingCart.instance()
 	shoppingCart.set_position(get_position())
 	get_parent().add_child(shoppingCart)

@@ -6,12 +6,17 @@ extends Area2D
 # var b = "text"
 var inreach = false
 var player
-
+var fruitName 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	get_parent().find_node("Panel").visible = false
-	get_parent().find_node("Name").set_text(get_parent().name)
-	pass # Replace with function body.
+	fruitName = get_parent().name
+	var i = len(fruitName) - 1
+	while(fruitName[i] in "1234567890"):
+		fruitName = fruitName.substr(0, i)
+		i = i - 1
+	get_parent().find_node("Name").set_text(fruitName)
+	# Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -19,7 +24,7 @@ func _ready():
 #	pass
 func _process(delta):
 	if(inreach == true && Input.is_action_just_pressed("e") && !"Empty" in get_parent().name):
-		player.addFruit(get_parent().name)
+		player.addFruit(fruitName)
 
 
 func _on_BananaHitBox_body_entered(body):

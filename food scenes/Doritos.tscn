@@ -3,7 +3,7 @@
 [ext_resource path="res://Assets/Doritos.png" type="Texture" id=1]
 [ext_resource path="res://food scenes/Cheetos.tscn" type="PackedScene" id=2]
 
-[node name="Doritos" instance=ExtResource( 2 )]
+[node name="Duhritos" instance=ExtResource( 2 )]
 
 [node name="Coke" parent="." index="0"]
 texture = ExtResource( 1 )
