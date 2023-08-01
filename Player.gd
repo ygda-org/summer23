@@ -3,6 +3,7 @@ extends KinematicBody2D
 
 export var speed = 200
 var dead = false
+var numFruits = 0
 var velocity = Vector2.ZERO
 var direction = 0
 var inventory = {
@@ -10,24 +11,28 @@ var inventory = {
 }
 func get_input():
 	if(dead == false):
-		velocity = Vector2.ZERO
 		if Input.is_action_pressed("a"):
-			velocity.x -= 1
+			velocity.y = 0
+			velocity.x = -1
 			$AnimatedSprite.play("walkLeft")
 			direction = 3
 		elif Input.is_action_pressed("d"):
-			velocity.x += 1
+			velocity.y = 0
+			velocity.x = 1
 			$AnimatedSprite.play("walkRight")
 			direction = 1
 		elif Input.is_action_pressed("w"):
-			velocity.y -= 1
+			velocity.x = 0
+			velocity.y = -1
 			$AnimatedSprite.play("walkUp")
 			direction = 0
 		elif Input.is_action_pressed("s"):
-			velocity.y += 1
+			velocity.x = 0
+			velocity.y = 1
 			$AnimatedSprite.play("walkDown")
 			direction = 2
-		else:
+		elif(get_slide_count() > 0):
+			velocity = Vector2.ZERO
 			if(direction == 0):
 				$AnimatedSprite.play("idleUp")
 			if(direction == 1):
@@ -36,10 +41,11 @@ func get_input():
 				$AnimatedSprite.play("idleDown")
 			if(direction == 3):
 				$AnimatedSprite.play("idleLeft")
-		velocity = velocity.normalized() * speed
+		velocity = velocity.normalized() * speed * (1 + numFruits/15.0)
 
 func addFruit(name):
 	var inventoryInterface = $Camera2D/CanvasLayer/Interface/HBoxContainer2/Inventory
+	numFruits = numFruits + 1
 	if !(name in inventory.keys()):
 		inventory[name] = 1
 		inventoryInterface.get_parent().set_size(inventoryInterface.get_parent().get_size() + Vector2(0, 17))
@@ -59,7 +65,8 @@ func dead():
 	
 func getInventory():
 	return inventory
-	
+func getNumFruits():
+	return numFruits
 func _physics_process(delta):
 	get_input()
 	velocity = move_and_slide(velocity)

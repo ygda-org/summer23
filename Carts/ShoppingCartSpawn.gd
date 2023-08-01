@@ -18,8 +18,10 @@ func _ready():
 
 
 func _on_Timer_timeout():
-	$Timer.wait_time = randf() * 4 
+	var speed = get_parent().get_parent().get_parent().find_node("Player").getNumFruits()
+	$Timer.wait_time = randf() * (4 - speed/(speed + 10.0)*3) 
 	var shoppingCart = ShoppingCart.instance()
+	shoppingCart.setSpeed((1 + speed/15.0) * shoppingCart.getSpeed())
 	shoppingCart.set_position(get_position())
 	get_parent().add_child(shoppingCart)
 	set_position( Vector2(randf() * get_parent().rect_size.x, randf() * get_parent().rect_size.y))

@@ -42,10 +42,13 @@ func _physics_process(delta):
 			for i in get_slide_count():
 				if("Player" in get_slide_collision(i).collider.name):
 					get_slide_collision(i).collider.dead()
-				elif(!"ShoppingCart" in get_slide_collision(i).collider.name):
+				#elif(!"ShoppingCart" in get_slide_collision(i).collider.name):
+				else:
 					queue_free()
 #	pass
-
-
+func setSpeed(speed):
+	SPEED = speed
+func getSpeed():
+	return SPEED
 func _on_Timer_timeout():
 	moving = true # Replace with function body.

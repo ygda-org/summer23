@@ -3,7 +3,7 @@
 [ext_resource path="res://Assets/Vanilla IC.png" type="Texture" id=1]
 [ext_resource path="res://food scenes/Red Milk.tscn" type="PackedScene" id=2]
 
-[node name="Red Milk" instance=ExtResource( 2 )]
+[node name="Ice Cream" instance=ExtResource( 2 )]
 
 [node name="Eggs" parent="." index="3"]
 texture = ExtResource( 1 )
