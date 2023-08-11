@@ -7,3 +7,13 @@
 
 [node name="Coke" parent="." index="0"]
 texture = ExtResource( 1 )
+
+[node name="Node2D" parent="." index="1"]
+z_index = 1
+
+[node name="Name" parent="Node2D/Control/VBoxContainer" index="0"]
+margin_bottom = 18.0
+
+[node name="Key" parent="Node2D/Control/VBoxContainer" index="1"]
+margin_top = 22.0
+margin_bottom = 37.0

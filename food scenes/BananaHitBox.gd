@@ -9,7 +9,7 @@ var player
 var fruitName 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	get_parent().find_node("Panel").visible = false
+	get_parent().find_node("Control").visible = false
 	fruitName = get_parent().name
 	var i = len(fruitName) - 1
 	while(fruitName[i] in "1234567890"):
@@ -31,10 +31,10 @@ func _on_BananaHitBox_body_entered(body):
 	if("Player" in body.name):# Replace with function body.
 		player = body
 		if(!"Empty" in get_parent().name):
-			get_parent().find_node("Panel").visible = true
+			get_parent().find_node("Control").visible = true
 			inreach = true
 
 func _on_BananaHitBox_body_exited(body):
 	if("Player" in body.name):
-		get_parent().find_node("Panel").visible = false
+		get_parent().find_node("Control").visible = false
 		inreach = false # Replace with function body.
