@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://food scenes/Banana.tscn" type="PackedScene" id=1]
 [ext_resource path="res://food scenes/Apple.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://food scenes/Milk.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Checkout.tscn" type="PackedScene" id=7]
 [ext_resource path="res://environment/wallTileset.tres" type="TileSet" id=8]
+[ext_resource path="res://food scenes/Pineapple.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Carts/SpawnArea.tscn" type="PackedScene" id=10]
 [ext_resource path="res://food scenes/Ice Cream.tscn" type="PackedScene" id=11]
 [ext_resource path="res://food scenes/Red Milk.tscn" type="PackedScene" id=12]
@@ -21,6 +22,9 @@
 [ext_resource path="res://food scenes/Takis.tscn" type="PackedScene" id=20]
 [ext_resource path="res://food scenes/Sprite.tscn" type="PackedScene" id=21]
 [ext_resource path="res://food scenes/Pepsi.tscn" type="PackedScene" id=22]
+[ext_resource path="res://food scenes/Pear.tscn" type="PackedScene" id=23]
+[ext_resource path="res://food scenes/Watermelon.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Assets/shop_speedrun_idea.mp3" type="AudioStream" id=25]
 
 [node name="World" type="Node2D"]
 z_index = 1
@@ -79,10 +83,10 @@ position = Vector2( 728, 225 )
 [node name="Banana4" parent="Foods" instance=ExtResource( 1 )]
 position = Vector2( 792, 225 )
 
-[node name="Cocke" parent="Foods" instance=ExtResource( 13 )]
+[node name="Cock" parent="Foods" instance=ExtResource( 13 )]
 position = Vector2( 203, 209 )
 
-[node name="Peepsi" parent="Foods" instance=ExtResource( 22 )]
+[node name="Peepee" parent="Foods" instance=ExtResource( 22 )]
 position = Vector2( 323, 209 )
 
 [node name="Spite" parent="Foods" instance=ExtResource( 21 )]
@@ -110,51 +114,86 @@ position = Vector2( 440, 530 )
 position = Vector2( 237, -96 )
 
 [node name="Milk" parent="Foods" instance=ExtResource( 6 )]
-position = Vector2( 353, -96 )
+position = Vector2( 352, -96 )
 
 [node name="Red Milk2" parent="Foods" instance=ExtResource( 12 )]
-position = Vector2( 412, -96 )
+position = Vector2( 410, -96 )
 
 [node name="Ice Cream" parent="Foods" instance=ExtResource( 11 )]
 position = Vector2( 294, -96 )
 
+[node name="Pineapple" parent="Foods" instance=ExtResource( 9 )]
+position = Vector2( 730, 509 )
+
+[node name="Pineapple2" parent="Foods" instance=ExtResource( 9 )]
+position = Vector2( 793, 509 )
+
+[node name="Pineapple3" parent="Foods" instance=ExtResource( 9 )]
+position = Vector2( 730, 544 )
+
+[node name="Pineapple4" parent="Foods" instance=ExtResource( 9 )]
+position = Vector2( 793, 544 )
+
+[node name="Pear" parent="Foods" instance=ExtResource( 23 )]
+position = Vector2( -121, 352 )
+
+[node name="Pear2" parent="Foods" instance=ExtResource( 23 )]
+position = Vector2( -58, 352 )
+
+[node name="Pear3" parent="Foods" instance=ExtResource( 23 )]
+position = Vector2( -121, 384 )
+
+[node name="Pear4" parent="Foods" instance=ExtResource( 23 )]
+position = Vector2( -58, 384 )
+
+[node name="Watermelon" parent="Foods" instance=ExtResource( 24 )]
+position = Vector2( 793, 353 )
+
+[node name="Watermelon2" parent="Foods" instance=ExtResource( 24 )]
+position = Vector2( 730, 353 )
+
+[node name="Watermelon3" parent="Foods" instance=ExtResource( 24 )]
+position = Vector2( 730, 384 )
+
+[node name="Watermelon4" parent="Foods" instance=ExtResource( 24 )]
+position = Vector2( 793, 384 )
+
 [node name="Spawns" type="Node2D" parent="."]
 
 [node name="SpawnArea" parent="Spawns" instance=ExtResource( 10 )]
-margin_left = -14.0
+margin_left = 1.0
 margin_top = 141.0
-margin_right = 133.0
+margin_right = 115.0
 margin_bottom = 646.0
 
 [node name="SpawnArea3" parent="Spawns" instance=ExtResource( 10 )]
-margin_left = -15.0
-margin_top = 255.0
-margin_right = 690.0
-margin_bottom = 313.0
+margin_top = 273.0
+margin_right = 674.0
+margin_bottom = 297.0
 
 [node name="SpawnArea2" parent="Spawns" instance=ExtResource( 10 )]
-margin_left = 508.0
+margin_left = 531.0
 margin_top = 148.0
-margin_right = 688.0
+margin_right = 673.0
 margin_bottom = 647.0
 
 [node name="SpawnArea5" parent="Spawns" instance=ExtResource( 10 )]
-margin_left = -13.0
+margin_left = -2.0
 margin_top = 580.0
-margin_right = 690.0
+margin_right = 672.0
 margin_bottom = 647.0
 
 [node name="SpawnArea4" parent="Spawns" instance=ExtResource( 10 )]
-margin_left = -14.0
-margin_top = 414.0
-margin_right = 688.0
-margin_bottom = 476.0
+margin_left = -1.0
+margin_top = 434.0
+margin_right = 672.0
+margin_bottom = 461.0
 
 [node name="SpawnArea6" parent="Spawns" instance=ExtResource( 10 )]
-margin_left = -80.0
+margin_left = 1.0
 margin_top = -24.0
-margin_right = 753.0
-margin_bottom = 140.0
+margin_right = 671.0
+margin_bottom = 127.0
 
 [node name="Checkouts" type="Node2D" parent="."]
 
@@ -169,3 +208,7 @@ position = Vector2( 355, 715 )
 
 [node name="Checkout4" parent="Checkouts" instance=ExtResource( 7 )]
 position = Vector2( 485, 714 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 25 )
+autoplay = true

@@ -1,7 +1,7 @@
-extends KinematicBody2D
+extends KinematicBody2D 
 
 
-export var speed = 200
+export var speed = 150
 var dead = false
 var numFruits = 0
 var velocity = Vector2.ZERO
@@ -11,22 +11,22 @@ var inventory = {
 }
 func get_input():
 	if(dead == false):
-		if Input.is_action_pressed("a"):
+		if Input.is_action_pressed("a") || Input.is_action_pressed("ui_left"):
 			velocity.y = 0
 			velocity.x = -1
 			$AnimatedSprite.play("walkLeft")
 			direction = 3
-		elif Input.is_action_pressed("d"):
+		elif Input.is_action_pressed("d") || Input.is_action_pressed("ui_right"):
 			velocity.y = 0
 			velocity.x = 1
 			$AnimatedSprite.play("walkRight")
 			direction = 1
-		elif Input.is_action_pressed("w"):
+		elif Input.is_action_pressed("w") || Input.is_action_pressed("ui_up"):
 			velocity.x = 0
 			velocity.y = -1
 			$AnimatedSprite.play("walkUp")
 			direction = 0
-		elif Input.is_action_pressed("s"):
+		elif Input.is_action_pressed("s") || Input.is_action_pressed("ui_down"):
 			velocity.x = 0
 			velocity.y = 1
 			$AnimatedSprite.play("walkDown")
@@ -45,6 +45,7 @@ func get_input():
 
 func addFruit(name):
 	var inventoryInterface = $Camera2D/CanvasLayer/Interface/HBoxContainer2/Inventory
+	var shoppingList = find_node("Objective").getShoppingList()
 	numFruits = numFruits + 1
 	if !(name in inventory.keys()):
 		inventory[name] = 1
@@ -53,7 +54,15 @@ func addFruit(name):
 		inventory[name] = inventory[name] + 1
 	var text = ""
 	for fruit in inventory:
-		text = text + fruit + " x" + str(inventory[fruit]) + "\n"
+		shoppingList = find_node("Objective").getShoppingList()
+		if fruit in shoppingList:
+			if(inventory[fruit] >= shoppingList[fruit]):
+				text = text + fruit + " x" + str(inventory[fruit]) + " - !" + "\n"
+			else:
+				text = text + fruit + " x" + str(inventory[fruit]) + "\n"
+		else:
+			text = text + fruit + " x" + str(inventory[fruit]) + " - !" + "\n"
+	
 	inventoryInterface.find_node("Label").text = "Inventory" + "\n" + text
 
 func dead():

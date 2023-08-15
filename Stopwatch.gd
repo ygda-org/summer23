@@ -21,6 +21,7 @@ func _process(delta):
 	else:
 		strTime += ":" + str(seconds)
 	set_text(strTime)
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
