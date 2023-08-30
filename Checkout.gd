@@ -19,7 +19,7 @@ func _process(delta):
 			if(!fruit in inventory.keys() || inventory[fruit] < shoppingList[fruit]):
 				flag = false
 		if(flag == true):
-			player.find_node("Test").visible = true
+			get_tree().change_scene("res://EndScreen.tscn")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
