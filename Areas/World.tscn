@@ -2,7 +2,7 @@
 
 [ext_resource path="res://food scenes/Banana.tscn" type="PackedScene" id=1]
 [ext_resource path="res://food scenes/Apple.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://environment/groundTileset.tres" type="TileSet" id=4]
 [ext_resource path="res://food scenes/Orange.tscn" type="PackedScene" id=5]
 [ext_resource path="res://food scenes/Milk.tscn" type="PackedScene" id=6]

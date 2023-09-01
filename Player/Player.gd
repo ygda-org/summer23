@@ -2,15 +2,21 @@ extends KinematicBody2D
 
 
 export var speed = 150
+export var numLives = 4
+var Heart = preload("res://Player/life UI.tscn")
 var dead = false
+var invincible = false
 var numFruits = 0
 var velocity = Vector2.ZERO
 var direction = 0
 var inventory = {
 	
 }
+func _ready():
+	addHearts()
+	
 func get_input():
-	if(dead == false):
+	if(dead == false and not invincible):
 		if Input.is_action_pressed("a") || Input.is_action_pressed("ui_left"):
 			velocity.y = 0
 			velocity.x = -1
@@ -65,17 +71,37 @@ func addFruit(name):
 	
 	inventoryInterface.find_node("Label").text = "Inventory" + "\n" + text
 
+func decrementLives():
+	if(not invincible):
+		if numLives:
+			numLives -= 1
+			invincible = true
+			$IFrames.start()
+			velocity = Vector2()
+			find_node("Hearts").get_children()[0].queue_free()
+		else:
+			dead()
+			
 func dead():
 	dead = true
 	velocity = Vector2()
 	$AnimatedSprite.queue_free()
 	$CollisionShape2D.queue_free()
 	$Timer.start()
+
+func isDead():
+	return dead
+	
+func addHearts():
+	for i in range(numLives):
+		var heart = Heart.instance()
+		find_node("Hearts").add_child(heart)
 	
 func getInventory():
 	return inventory
 func getNumFruits():
 	return numFruits
+
 func _physics_process(delta):
 	get_input()
 	velocity = move_and_slide(velocity)
@@ -83,3 +109,7 @@ func _physics_process(delta):
 
 func _on_Timer_timeout():
 	get_tree().change_scene("res://Areas/World.tscn") # Replace with function body.
+
+
+func _on_IFrames_timeout():
+	invincible = false # Replace with function body.
