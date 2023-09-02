@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 
 export var speed = 150
-export var numLives = 4
+export var numLives = 4 #add 1 to what ever num u put
 var Heart = preload("res://Player/life UI.tscn")
 var dead = false
 var invincible = false
@@ -79,6 +79,8 @@ func decrementLives():
 			$IFrames.start()
 			velocity = Vector2()
 			find_node("Hearts").get_children()[0].queue_free()
+			$AnimatedSprite.play("idle" + ["Up", "Right", "Down", "Left"][direction])
+			$AnimatedSprite.modulate.a = 0.5
 		else:
 			dead()
 			
@@ -106,10 +108,11 @@ func _physics_process(delta):
 	get_input()
 	velocity = move_and_slide(velocity)
 
-
 func _on_Timer_timeout():
 	get_tree().change_scene("res://Areas/World.tscn") # Replace with function body.
 
 
 func _on_IFrames_timeout():
+	if(not isDead()):
+		$AnimatedSprite.modulate.a = 1
 	invincible = false # Replace with function body.
